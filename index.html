@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/main.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <title>Personal Website</title>
+
+
+</head>
+
+
+
+<body>
+
+
+    <nav class="navbar navbar-dark mx-auto fixed-top" style="background-color: black;" id="headerNav">
+        <div class="container-fluid p-0">
+          <a class="navbar-brand d-block d-lg-none" href="#">
+            <img src="/static/pictures/lion.jpeg" height="80" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mx-auto"></span>
+          </button>
+       
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown"style="height:max-content;">
+            <ul class="nav nav-tabs mx-auto nav-fill w-100">
+              <li class="nav-item p-lg-3 " style="height:80px;">
+                <a class="nav-link" aria-current="page" id="page" href="#resume" style="color:white">Resume</a>
+              </li>
+              <li class="nav-item p-lg-3" style="height:80px;">
+                <a class="nav-link" id="page" href="#about" style="color:white">About Me</a>
+              </li>
+              <li class="nav-item d-none d-lg-block ">
+                <a class="nav-link" id="page" href="#home">
+                  <img src="/static/pictures/lion.jpeg" height="60px" />
+                </a>
+              </li>
+              <li class="nav-item  p-lg-3" style="height:80px;">
+                <a class="nav-link" id="page" href="#skills" style="color:white">Skill Proficiency Overview</a>
+              </li>
+              <li class="nav-item p-lg-3" style="height:80px;">
+                <a class="nav-link" id="page" href="#contacts" style="color:white"> Contact Me </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <!--Carousel-->
+      <section class="home" id="home">
+
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" style="background-image: -webkit-linear-gradient(#000000,gray);">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="hero text-center">
+            <h1> Ryan Stoltz </h1>
+            <h2> Software Engineer | AI/IOT Enthusiast | Global Citizen</h2>
+            <ul class="pro">
+                <li><a href="https://github.com/ryan-stoltz"><i class="fa fa-github"></i></a></li>
+                <li><a href="linkedin.com/in/ryan-stoltz-0a2123199"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:ryan.stoltz@alumni.wfu.edu"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img class="cim d-block" src="/static/pictures/NZ.jpeg" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+            </div>
+            <div class="carousel-item ">
+                <img class="cim d-block" src="/static/pictures/denmark.jpeg" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+            </div>
+            <div class="carousel-item">
+                <img class="cim d-block" src="/static/pictures/za.jpeg" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </section>
+
+
+        
+    <!--About Me-->
+    <section class="about" id="about">
+        <div class="aboutme">
+
+            <!-- GRID FOR ABOUT ME W COUNTRIES + ACHIEVEMENTS-->
+                <div class="col-six tab-full">
+                    <h4 class="living" id="profile" > About Me </h4>
+                    <div class="intro">
+                        <img src="/static/pictures/Profile_ME.JPG" alt ="Profile Photo"> 
+                        <p class="introline"> I'm a Software Engineer looking for a job developing meaningful and cutting edge tech. I graduated in June of 2022 from Wake Forest University with a Bachelors in Computer Science. I love all things software but I'm really excited about Machine Learning, IoT, and Cloud Computing right now. I am also a big fan of Python and like to think of Python and C as my bread and butter programming languages.</p>
+                    </div>
+                </div>
+
+                <div class="col-six tab-full"> 
+
+                    <h3 class="perstitle"> Personal Information </h3>
+                    
+                    <ul class="info-list">
+                        <li>
+                            <strong> Full Name: </strong>
+                            <span> Ryan Garry Stoltz </span>
+                        </li>
+                        <li> 
+                            <strong> Age and Date of Birth:</strong>
+                            <span> I'm 22 and was born on August 15th 2000</span>
+                        </li>
+                        <li>
+                            <strong> Nationality: </strong>
+                            <span> I'm half American and half Kiwi (New Zealander)</span>
+                        </li>
+
+                        <li>
+                            <strong> Current place of residence: </strong>
+                            <span> Fairfax, VA</span>
+                        </li>
+                        
+
+                    </ul>
+                    
+
+                </div>
+
+
+                <div class="row">
+                    
+                    <h4 class="living"> Places I've Lived: </h4>
+
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="name1"> <img src="/static/pictures/Flags/SingaporeFlag.png"class="img-thumbnail"width="300px"height="200px" name="Singapore (Born)" id="Country1"></td>
+                                <td class="name2"> <img src="/static/pictures/Flags/IndonesiaFlag.png"class="img-thumbnail"width="300px"height="200px" name="Indonesia (2000-2001)"id="Country2"></td> 
+                                <td class="name3"> <img src="/static/pictures/Flags/MalayFlag.jpeg"class="img-thumbnail"width="300px"height="200px" name="Malaysia (2001-2004)"id="Country3"></td> 
+                                <td class="name4"> <img src="/static/pictures/Flags/BurmeseFlag.png"class="img-thumbnail"width="300px"height="200px" name="Myanmar (2004-2007)"id="Country4"></td>  
+                            </tr>
+                            <tr>
+                                <td class="name5"> <img src="/static/pictures/Flags/USFlag.jpeg"class="img-thumbnail" width="300px" height="200px" name="USA (2007-2010),(2016-Present)"id="Country5"></td>
+                                <td class="name6"> <img src="/static/pictures/Flags/SouthAfricanFlag.png"class="img-thumbnail" width="300px" height="200px" name="South Africa (2010-2013)"id="Country6"></td> 
+                                <td class="name7"> <img src="/static/pictures/Flags/DanishFlag.png"class="img-thumbnail"width="300px"height="200px" name="Denmark (2013-2016)"id="Country7"></td> 
+                                <td class="name8"> <img src="/static/pictures/Flags/NZFlag.jpeg"class="img-thumbnail"width="300px"height="200px" name="New Zealand (~1 Year in interim)"id="Country8"></td> 
+                            </tr>
+                            <div class="cname">
+                                <h3 class="countrytext">Country Name:</h3>
+                            </div>
+                        </tbody>
+                    </table>
+
+                    
+
+                </div>
+
+
+        </section>
+
+        <!--Resume-->
+        <section id="resume">
+        <p class="border border-dark"></p>
+        
+
+            <div class="row section-intro">
+
+                <div class="col-twelve">
+
+                    <h5> Resume</h5>
+                    <p class="lead"> Interships, Education, and Service</p>
+
+
+                </div>
+
+
+                <div class="col-twelve">
+
+                    <h1> Below is my resume (succinct version) available for download</h1>
+                    <a class="btn btn-primary align-content-center" target="blank" href="/static/documents/Ryan_Stoltz_Resume_NoGPA (1).pdf" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download Resume</a>
+
+                </div>
+            
+            </div>
+
+                
+                <!-- Internship timeline -->
+
+            <div class="row resume-timeline">
+
+                <div class="col-twelve resume-header">
+
+                    <h2> Work Experience </h2>
+
+                </div>
+            
+
+            <div class="col-twelve">
+
+
+                <div class="timeline-wrap">
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-handshake-o"style="font-size:50px;color:black;"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Software Engineering Intern</h3>
+                            <p>February 2022 - May 2022</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4><a href="https://www.getsmoodi.com/" target="_blank">Smoodi</a></h4>
+                            <p> Team member at Smoodi where I contributed towards building and testing their patented fully automatic and self-cleaning smoothie machines. I also helped create the front-end for their mobile payment app.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-block">
+
+                        <div class="timeline-ico">
+                            <i class="fa fa-handshake-o"style="font-size:50px;color:black;"></i>
+                        </div>
+
+                        <div class="timeline-header">
+                            <h3>Systems Development Intern</h3>
+                            <p> May 2021 - August 2021</p>
+                        </div>
+
+                        <div class="timeline-content">
+                            <h4><a href="https://www.zyter.com/" target="_blank">Zyter Inc.</a></h4>
+                            <p> Worked on the ZyterHome product, a remote patient monitoring application intended to help small clinical providers better monitor patients with chronic conditions. 
+                                My primary responsibilities were wireframing, , creating technical instruction guides for clinical practices, and test/logging a variety of health care devices.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+                <div class="col-twelve resume-header">
+
+                    <h2> Education </h2>
+                    
+                </div>
+
+
+                <div class="col-twelve">
+                
+                    <div class="timeline-wrap">
+
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-book"style="font-size:50px;color:black;" ></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3>Bachelor's Degree</h3>
+                                <p>August 2018 - May 2022</p>
+                             </div>
+           
+                             <div class="timeline-content">
+                                <h4>Wake Forest University</h4>
+                                <p> Earned a B.S. in Computer Science and earned a Philosophy minor </p>
+                             </div>
+
+
+
+                        </div>
+
+
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                               <i class="fa fa-book"style="font-size:50px;color:black;"></i>
+                            </div>
+          
+                            <div class="timeline-header">
+                               <h3>High School Degree</h3>
+                               <p> September 2016 - June 2018</p>
+                            </div>
+          
+                            <div class="timeline-content">
+                               <h4>Washington-Liberty High School</h4>
+                               <p> Graduated after having successfully recived my IB Diploma</p>
+                            </div>
+          
+                         </div> 
+                
+                    </div>
+
+
+                
+
+                <div class="col-twelve resume-header">
+
+                    <h2> Leadership Experience and Service </h2>
+                    
+                </div>
+
+                <div class="col-twelve">
+
+                    <div class="timeline-wrap">
+
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-life-ring"style="font-size:50px;color:black;"></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3>Wake Radio</h3>
+                                <p>2019 - 2021</p>
+                             </div>
+           
+                             <div class="timeline-content">
+                                <h4>Wake Forest University</h4>
+                                <p>Hosted a late-night radio show promoting independent and up and coming artists as a means of increasing their exposure</p>
+                             </div>
+
+
+
+                        </div>
+
+
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-life-ring"style="font-size:50px;color:black;"></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3>Student Association for the Advancement of Refugees</h3>
+                                <p>2019 - 2020</p>
+                             </div>
+           
+                             <div class="timeline-content">
+                                <h4>Wake Forest University</h4>
+                                <p>Tutored English, Math, and History for two third graders whose parents fled the war in Syria</p>
+                             </div>
+
+
+
+                        </div>
+
+
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-life-ring"style="font-size:50px;color:black;"></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3> American Center Moscow </h3>
+                                <p>April 2020</p>
+                             </div>
+           
+                             <div class="timeline-content">
+                                <h4>U.S. Embassy Moscow</h4>
+                                <p>Hosted and prepared a virtual lecture on American hip hop and its development over time</p>
+                             </div>
+
+
+
+                        </div>
+
+
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-life-ring"style="font-size:50px;color:black;"></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3> The Lamb Center</h3>
+                                <p>2022 - Present</p>
+                             </div>
+           
+                             <div class="timeline-content">
+                                <h4>The Lamb Center</h4>
+                                <p>Help to distribute lunch at the local homeless shelter once a week</p>
+                             </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+                
+        <!--Project Portfolio -->
+
+        <section id="portfolio">
+
+        </section>
+    
+
+        <!--Skills-->
+
+        <section class="skills" id="skills">
+        <div class="skill-prof">
+
+            <!-- Need GRAPHS CHARTS ETC TO, LEETCODE, GITHUB, ANY PROOF IM NOT AN IMPOSTER-->
+            <p class="border border-dark"></p>
+            <div class="col-six tab-full">
+                
+                <h3 class="sk"> Programming Skills</h3>
+                <p class="disc"> Approximate proportion of time spent in each language </p>
+
+                <div class="skill-bars">
+                    <div class="skill-title">Python</div>
+                        <div class="progress" data-width="50%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">50%</div>
+
+                    </div>
+                </div>
+                <div class="skill-bars">
+                    <div class="skill-title">Java</div>
+                        <div class="progress" data-width="25%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">25%</div>
+
+                    </div>
+                </div>
+                <div class="skill-bars">
+                    <div class="skill-title">C/C++</div>
+                        <div class="progress" data-width="25%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">25%</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-six tab-full">
+
+                <h3 class="sk"> General CS Skills</h3>
+                <p class="disc"> Time spent learning about one subject vs another</p>
+
+                <div class="skill-bars">
+                    <div class="skill-title">AI/IOT DEVELOPMENT</div>
+                        <div class="progress" data-width="35%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">35%</div>
+
+                    </div>
+                </div>
+                <div class="skill-bars">
+                    <div class="skill-title">SOFTWARE DEVELOPMENT</div>
+                        <div class="progress" data-width="30%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">30%</div>
+
+                    </div>
+                </div>
+                <div class="skill-bars">
+                    <div class="skill-title">DATABASES (INCLUDING CLOUD COMPUTING)</div>
+                        <div class="progress" data-width="15%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">15%</div>
+
+                    </div>
+                </div>
+                <div class="skill-bars">
+                    <div class="skill-title">OPERATING SYSTEMS/UNIX</div>
+                        <div class="progress" data-width="10%">
+
+                        
+                            <div class="bar-inner">
+            
+                            </div>
+                            <div class="bar-label">10%</div>
+
+                        </div>
+                </div>
+                <div class="skill-bars-alg">
+                    <div class="skill-title">Cybersecurity</div>
+                        <div class="progress" data-width="10%">
+
+                        
+                        <div class="bar-inner">
+            
+                        </div>
+                        <div class="bar-label">10%</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        </section>
+   
+
+
+
+         <!--Contacts-->
+
+        <section class="contacts" id="contacts">
+        <!--NEED SOCIALS FOR CONTACT ME (INCL LINKEDIN)-->
+        <p class="border border-dark"></p>
+        <div class="Contact Me">
+            <div class="section" id="contact">
+                <div class="cc-contact-information">
+                    <div class="container">
+                        <div class="cc-contact">
+                            <div class="row">
+                                <div class="h4 text-centered-title" id="contact-me">
+                                    <b>Contact Me</b>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <form action="/sendemail/" method="POST">
+                                                <div class="p pb-3">
+                                                    <strong class="add"> Please Reach Out! </strong>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="input-group">
+                                                            <input class="form-control" type="text" name="name" placeholder="Name" required="required"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="input-group">
+                                                            <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="input-group">
+                                                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" name="message" placeholder="Your Message"
+                                                             required="required"> </textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <button class="btn btn-primary" type="submit">
+                                                            Send
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6" id="persinfo">
+                                        <div class="card-body">
+                                            <p class="mb-0">
+                                                <strong> Address </strong>
+                                            </p>
+
+                                            <p class="pb-2"> 1234 4th st N </p>
+
+                                            <p class="mb-0"><strong>Phone Number</strong></p>
+
+                                            <p class="pb-2">123-456-7890</p>
+
+                                            <p class="mb-0"><strong>Email</strong></p>
+
+                                            <p>ryan.stoltz@alumni.wfu.edu</p>
+
+                                        </div>
+
+
+                                        <div class="icon">
+                                            <i class="fa fa-linkedin-square"style="font-size:50px;"></i>
+                                        </div>
+                            
+                                        <h5>Add Me on LinkedIn</h5>
+                                        <a href="linkedin.com/in/ryan-stoltz-0a2123199" target="_blank">LinkedIn Profile</a>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         </section>
+
+
+
+
+
+        <footer>
+            <div class="row">
+                <div class="twelve columns">
+                    <ul class="copyright">
+                        <li> Coded by: Ryan Stoltz</li>
+                        <li> &copy; Copyright 2022 [idk some company I guess]</li>
+                        <li> Credit to: skrg141 from <a title="GeeksForGeeks" href="https://www.geeksforgeeks.org/single-page-portfolio-using-flask/"> GeeksForGeeks </a> and Sunwoo Kang for her <a title="Website" href="https://swkang73.github.io/#home"> Website </a> and <a title="Github" href="https://github.com/swkang73/swkang73.github.io"> Github </a></li>
+                    </ul>
+                </div>
+
+                <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+            </div>
+
+
+        </footer>
+   
+   
+   
+   
+    <!--Bootstrap Bundle w/ Popper-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{{url_for('static',filename='js/website.js')}}">
+    </script>
+
+</body>
+
+
+
+
+
+
+
+
+</html>
