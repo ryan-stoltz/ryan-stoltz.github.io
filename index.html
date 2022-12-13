@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/main.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
@@ -581,7 +581,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="card-body">
-                                            <form action="/sendemail/" method="POST">
+                                            <form method="POST" action="https://api.web3forms.com/submit" id="form">
+                                                <input type="hidden" name="access_key" value="46a1d221-0172-441d-ba6d-747734e6c40b" />
                                                 <div class="p pb-3">
                                                     <strong class="add"> Please Reach Out! </strong>
                                                 </div>
@@ -619,6 +620,7 @@
                                                         <button class="btn btn-primary" type="submit">
                                                             Send
                                                         </button>
+                                                        <p id="sent"> </p>
                                                     </div>
                                                 </div>
                                             </form>
@@ -708,7 +710,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="static/js/website.js">
+    <script type="text/javascript" src="{{url_for('static',filename='js/website.js')}}">
     </script>
 
 </body>
