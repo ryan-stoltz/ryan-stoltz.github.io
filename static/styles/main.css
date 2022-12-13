@@ -185,7 +185,7 @@ footer .social-links li {
 /* Resume Section /*/
 
 #resume{
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,0,0,0.85);
 }
 
 #resume .section_intro h1{
@@ -408,10 +408,10 @@ footer .social-links li {
   }
   
   .intro img {
-    height: 12rem;
-    width: 14rem;
+    height: 20rem;
+    width: 18rem;
     border:1px solid #f0600000;
-    border-radius: 50%;
+    border-radius: 70%;
     margin: 20px;
 
   }
@@ -704,4 +704,5 @@ b {
 .sk{
   color:crimson;
 }
+
 
